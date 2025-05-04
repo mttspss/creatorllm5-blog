@@ -1,14 +1,12 @@
 import { getPostData, getAllPosts } from '@/lib/posts';
 
 export async function generateStaticParams() {
-  const posts = getAllPosts();
-  return posts.map((post) => ({
-    id: post.id,
-  }));
+  return getAllPosts().map(post => ({ id: post.id }));
 }
 
-export default async function Page({ params }: { params: { id: string } }) {
-  const postData = await getPostData(params.id);
+export default async function Page(context: any) {
+  const { id } = context.params;
+  const postData = await getPostData(id);
 
   return (
     <article className="prose prose-lg mx-auto py-8">
