@@ -1,36 +1,43 @@
+import { getAllPosts, Post } from '@/lib/posts';
 import Link from 'next/link';
-import { getAllPosts } from '@/lib/posts';
+import ProgressTracker from '@/components/ProgressTracker';
+import { format, parseISO } from 'date-fns';
+import MonthSection from '@/components/MonthSection';
+
+// Raggruppa i post per mese utilizzando il tipo Post
+function groupPostsByMonth(posts: Post[]): Record<string, Post[]> {
+  return posts.reduce((acc: Record<string, Post[]>, post) => {
+    const date = new Date(post.date);
+    const month = format(date, 'MMMM yyyy');
+    if (!acc[month]) acc[month] = [];
+    acc[month].push(post);
+    return acc;
+  }, {});
+}
 
 export default function BlogPage() {
+  // Ottieni tutti i post, tipizzati come Post[]
   const posts = getAllPosts();
+  const grouped = groupPostsByMonth(posts);
+  // Ordina i mesi in ordine decrescente (dal più recente)
+  const months = Object.keys(grouped).sort((a, b) => {
+    return new Date(grouped[b][0].date).getTime() - new Date(grouped[a][0].date).getTime();
+  });
 
   return (
-    <div className="py-8">
-      <h1 className="text-3xl font-bold text-gray-900 mb-8">Blog</h1>
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {posts.map((post) => (
-          <article
-            key={post.id}
-            className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
-          >
-            <div className="p-6">
-              <h2 className="text-xl font-semibold text-gray-900 mb-2">
-                <Link href={`/blog/${post.id}`} className="hover:text-indigo-600">
-                  {post.title}
-                </Link>
-              </h2>
-              <p className="text-gray-600 mb-4">{post.description}</p>
-              <div className="text-sm text-gray-500">
-                {new Date(post.date).toLocaleDateString('it-IT', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric',
-                })}
-              </div>
-            </div>
-          </article>
+    <div className="py-8 max-w-2xl mx-auto">
+      {/* Barra di progresso giornaliera */}
+      <ProgressTracker startDate="2025-05-01" />
+
+      <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 mt-8">
+        Blog
+      </h1>
+
+      <div className="relative border-l-4 border-[#00DAFB]/40 ml-4">
+        {months.map((month) => (
+          <MonthSection key={month} month={month} posts={grouped[month]} />
         ))}
       </div>
     </div>
   );
-} 
+}
