@@ -32,7 +32,7 @@ export default async function PostPage({
         />
       </article>
     );
-  } catch (error) {
+  } catch {
     notFound();
   }
 } 

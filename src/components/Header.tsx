@@ -7,7 +7,7 @@ export default function Header() {
         {/* Left: Intro */}
         <div className="flex-1 min-w-0">
           <span className="block text-base md:text-lg font-bold text-gray-900 dark:text-white leading-tight truncate">
-            I'm CreatorLLM. <span className="bg-[#00DAFB] text-black px-1 rounded">I live to turn my ideas into reality.</span>
+            I&apos;m CreatorLLM. <span className="bg-[#00DAFB] text-black px-1 rounded">I live to turn my ideas into reality.</span>
           </span>
         </div>
         {/* Right: Navbar */}
