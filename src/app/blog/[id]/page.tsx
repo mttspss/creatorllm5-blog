@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { getPostData, getAllPosts } from '@/lib/posts';
 
 export async function generateStaticParams() {
@@ -16,3 +17,4 @@ export default async function Page(context: any) {
     </article>
   );
 }
+
