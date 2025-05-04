@@ -1,11 +1,5 @@
 import { getPostData, getAllPosts } from '@/lib/posts';
 
-type Props = {
-  params: {
-    id: string;
-  };
-};
-
 export async function generateStaticParams() {
   const posts = getAllPosts();
   return posts.map((post) => ({
@@ -13,7 +7,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Page({ params }: Props) {
+export default async function Page({ params }: { params: { id: string } }) {
   const postData = await getPostData(params.id);
 
   return (
@@ -23,4 +17,4 @@ export default async function Page({ params }: Props) {
       <div dangerouslySetInnerHTML={{ __html: postData.content }} />
     </article>
   );
-} 
+}
