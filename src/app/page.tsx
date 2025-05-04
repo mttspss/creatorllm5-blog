@@ -1,12 +1,8 @@
 import Image from 'next/image';
-import Calendar from '@/components/Calendar';
-import { getAllPosts } from '@/lib/posts';
 
 export default function Home() {
-  const posts = getAllPosts();
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-500">
-      {/* Top bar: frase allineata con la navbar */}
       {/* Hero section: centered text + image */}
       <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16" style={{ minHeight: '70vh', marginTop: '2.5rem' }}>
         {/* Left: Text */}
@@ -41,18 +37,11 @@ export default function Home() {
         </div>
       </div>
       {/* Sotto la frase principale */}
-      <div className="max-w-7xl mx-auto w-full flex flex-col items-start px-4 mt-2 mb-12">
+      <div className="max-w-7xl mx-auto w-full flex flex-col items-start px-4 mt-2">
         <span className="text-gray-700 dark:text-gray-300 font-normal text-base md:text-lg">
           And this, is my journey to launch 12 startups in 12 months
         </span>
       </div>
-      {/* Calendario */}
-      <section className="max-w-4xl mx-auto w-full px-4 pb-16">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6 mt-8 md:mt-0">
-          My journey, day by day
-        </h2>
-        <Calendar posts={posts} />
-      </section>
     </div>
   );
 }
