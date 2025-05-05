@@ -1,6 +1,15 @@
 import Link from 'next/link';
 
-export default function CalendarMonth({ params: { year, month } }: { params: { year: string; month: string } }) {
+type Props = {
+  params: {
+    year: string;
+    month: string;
+  };
+};
+
+export default async function CalendarMonth({ params }: Props) {
+  const { year, month } = params;
+  
   return (
     <div className="p-4 max-w-4xl mx-auto relative">
       <Link
