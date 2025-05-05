@@ -47,12 +47,12 @@ export default function Header() {
           >
             Home
           </Link>
-          <a
+          <Link
             href="/#my-story"
             className="text-gray-900 dark:text-white hover:text-[#00DAFB] transition"
           >
             My story
-          </a>
+          </Link>
           <Link
             href="/blog"
             className="text-gray-900 dark:text-white hover:text-[#00DAFB] transition"

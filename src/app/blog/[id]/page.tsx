@@ -108,7 +108,7 @@ export default async function Page(props: any) {
             <p>Day 0/365 of building 12 startups in 12 months.</p>
             <p>After creating my socials and sharing my story yesterday, today was about getting my mind clear and setting the foundation for the next 365 days.</p>
             <p>First thing I had to do was to build a plan, a solid 12-month roadmap with real long-term goals baked in.<br />
-            Then, I started brainstorming ideas for the first month because I didn't show up here with something ready to launch, but with something to build from 0.<br />
+            Then, I started brainstorming ideas for the first month because I didn&apos;t show up here with something ready to launch, but with something to build from 0.<br />
             These first few days are for market research.</p>
             <p>Every startup or digital product I launch will come from three places:</p>
             <ul className="list-disc pl-6">
