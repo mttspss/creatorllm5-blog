@@ -199,6 +199,76 @@ export default async function Page(props: any) {
     );
   }
 
+  if (id === '2025-05-05-day-4') {
+    // JSX/HTML diretto per il post Day 4
+    const shareUrl = `https://x.com/intent/tweet?url=https://creatorllm.vercel.app/blog/2025-05-05-day-4`;
+    return (
+      <div className="max-w-2xl mx-auto py-10 px-4">
+        <ProgressTracker startDate="2025-05-01" />
+        <article className="bg-white rounded-xl shadow-lg p-8 md:p-12 mt-6 mb-8 border border-[#00DAFB]/10">
+          <div className="mb-4 flex flex-col gap-1">
+            <span className="text-[#00DAFB] font-semibold text-sm uppercase tracking-widest">
+              2025-05-05
+            </span>
+            <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-2">
+              Day 4/365 of building 12 startups in 12 months
+            </h1>
+            <p className="text-lg text-gray-600 mb-2">
+              The blog is online! A milestone in the journey and plans for the first startup.
+            </p>
+          </div>
+          <hr className="my-6 border-[#00DAFB]/20" />
+          <div className="text-gray-900 text-lg leading-relaxed space-y-4">
+            <p>Day 4/365 of building 12 startups in 12 months.</p>
+            <p>The blog is ONLINE!</p>
+            <p>you can check it out here: <a href="https://creatorllm.blog" className="text-[#00DAFB] hover:underline">creatorllm.blog</a><br />
+            it&apos;s super minimal, but enough to start.</p>
+            <p>after 2 days of debugging small stupid issues (that drove me crazy), today I managed to launch it online.<br />
+            the goal was never to build the perfect blog but something that works and lets me post my daily updates from Twitter in a more permanent space.</p>
+            <p>why?<br />
+            because it&apos;s going to be a place to store my projects (the next ones, because the blog will not count), links, tools, frameworks and video.<br />
+            it will be easier to upload them and to see them for people.</p>
+            <p>– eventually I will track the story behind each startup, with screenshots and decisions included</p>
+            <p>this is how Ive built it:</p>
+            <ul className="list-disc pl-6">
+              <li>cursor to vibe code everything (and i swear im not good at coding)</li>
+              <li>imagination for the design</li>
+              <li>chat gpt to debug</li>
+              <li>vercel to deploy it online</li>
+            </ul>
+            <p>build → test → move on</p>
+            <p>besides the blog launch, I also spent part of the afternoon:</p>
+            <ol className="list-decimal pl-6">
+              <li>scraping more startup ideas using Gemini; at the moment i have two concrete ideas for the first startup we&apos;re going to build.</li>
+              <li>i was planning to share my documents and deep research about tiktok and twitter strategy, so if you need to grow in social media, it might be a good resource for you.<br />
+              (still need to respect those because im very busy thinking about ideas and startups)</li>
+              <li>listing AI tools I personally use but find frustrating</li>
+              <li>writing prompts to speed up research/validation for the coming weeks</li>
+            </ol>
+            <p>Tomorrow I&apos;ll focus on 3 things:</p>
+            <p>➝ planning the first mini-MVP<br />
+            ➝ reviewing my idea list and picking just 1 to validate faster</p>
+            <p>warming up.</p>
+          </div>
+          <div className="mt-8 flex justify-end">
+            <a
+              href={shareUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-[#00DAFB] text-white rounded-lg font-semibold shadow hover:bg-[#00b8c7] transition-colors"
+            >
+              <svg width="20" height="20" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="120" height="120" rx="24" fill="black"/>
+                <path d="M85 35H100L67.5 70L105 120H79L60 95L41 120H15L52.5 70L20 35H45L60 55L75 35ZM80 110H90L50 50H40L80 110Z" fill="white"/>
+              </svg>
+              Condividi su X
+            </a>
+          </div>
+        </article>
+      </div>
+    );
+  }
+
   // Rendering standard per tutti gli altri post
   const postData = await getPostData(id);
 
