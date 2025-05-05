@@ -1,14 +1,14 @@
 import Link from 'next/link';
 
 type Props = {
-  params: {
+  params: Promise<{
     year: string;
     month: string;
-  };
+  }>;
 };
 
 export default async function CalendarMonth({ params }: Props) {
-  const { year, month } = params;
+  const { year, month } = await params;
   
   return (
     <div className="p-4 max-w-4xl mx-auto relative">
