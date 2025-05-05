@@ -6,9 +6,9 @@ import { usePathname } from 'next/navigation';
 
 export default function Header() {
   // Calcola anno e mese correnti per il link Calendar
-  const now = new Date();
-  const year = now.getFullYear();
-  const month = String(now.getMonth() + 1).padStart(2, '0');
+  // const now = new Date();
+  // const year = now.getFullYear();
+  // const month = String(now.getMonth() + 1).padStart(2, '0');
   const pathname = usePathname();
 
   return (
@@ -48,7 +48,7 @@ export default function Header() {
             Home
           </Link>
           <a
-            href="/#about-section"
+            href="/#my-story"
             className="text-gray-900 dark:text-white hover:text-[#00DAFB] transition"
           >
             My story
@@ -60,7 +60,7 @@ export default function Header() {
             Timeline
           </Link>
           <Link
-            href={`/calendar/${new Date().getFullYear()}/${String(new Date().getMonth()+1).padStart(2,'0')}`}
+            href="/calendar"
             className="text-gray-900 dark:text-white hover:text-[#00DAFB] transition"
           >
             Calendar

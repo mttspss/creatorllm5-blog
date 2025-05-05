@@ -1,8 +1,8 @@
 import { getAllPosts, Post } from '@/lib/posts';
-import Link from 'next/link';
 import ProgressTracker from '@/components/ProgressTracker';
-import { format, parseISO } from 'date-fns';
+import { format } from 'date-fns';
 import MonthSection from '@/components/MonthSection';
+import ScrollToTopButton from '@/components/ScrollToTopButton';
 
 // Raggruppa i post per mese utilizzando il tipo Post
 function groupPostsByMonth(posts: Post[]): Record<string, Post[]> {
@@ -38,6 +38,7 @@ export default function BlogPage() {
           <MonthSection key={month} month={month} posts={grouped[month]} />
         ))}
       </div>
+      <ScrollToTopButton />
     </div>
   );
 }

@@ -1,28 +1,227 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { getPostData, getAllPosts } from '@/lib/posts';
-import ProgressBar from '@/components/ProgressBar';
+import ProgressTracker from '@/components/ProgressTracker';
 
 export async function generateStaticParams() {
   return getAllPosts().map(post => ({ id: post.id }));
 }
 
-export default async function Page(context: any) {
-  const { id } = context.params;
+export default async function Page(props: any) {
+  const { id } = (await props.params) as { id: string };
+
+  if (id === '2025-05-02-day-1') {
+    // JSX/HTML diretto per il post Day 1
+    const shareUrl = `https://x.com/intent/tweet?url=https://creatorllm.vercel.app/blog/2025-05-02-day-1`;
+    return (
+      <div className="max-w-2xl mx-auto py-10 px-4">
+        <ProgressTracker startDate="2025-05-01" />
+        <article className="bg-white rounded-xl shadow-lg p-8 md:p-12 mt-6 mb-8 border border-[#00DAFB]/10">
+          <div className="mb-4 flex flex-col gap-1">
+            <span className="text-[#00DAFB] font-semibold text-sm uppercase tracking-widest">
+              2025-05-02
+            </span>
+            <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-2">
+              Day 1/365 of building 12 startups in 12 months
+            </h1>
+            <p className="text-lg text-gray-600 mb-2">
+              First day: commitment, research, and first steps towards the 12-month challenge.
+            </p>
+          </div>
+          <hr className="my-6 border-[#00DAFB]/20" />
+          <div className="text-gray-900 text-lg leading-relaxed space-y-4">
+            <p>Day 1/365 of building 12 startups in 12 months</p>
+            <p>Today was about translating commitment into first steps.</p>
+            <p>As I was saying yesterday, the focus was completely on the 12-month plan.<br />
+            I have to refine a lot of things before I start building.<br />
+            You need to use your imagination a lot for this and be productive at the same time.<br />
+            I will not give you the story that it will be easy.</p>
+            <p>So I spent the whole day on:</p>
+            <ul className="list-disc pl-6">
+              <li>
+                Analyzed and studied <span className="font-semibold text-[#00DAFB]">@starter_story</span> and <span className="font-semibold text-[#00DAFB]">@levelsio</span>:
+                <ul className="list-disc pl-6">
+                  <li>During these 365 days I will 100% need to use cursor to launch startups and code, that&apos;s why I was watching <span className="font-semibold text-[#00DAFB]">@starter_story</span>&apos;s yt video for vide coding.</li>
+                  <li>&rarr; Confirmed that cursor will be essential for the AI-assisted coding workflow</li>
+                  <li>At the same time I was deep researching <span className="font-semibold text-[#00DAFB]">@levelsio</span></li>
+                  <li>Because it&apos;s an inspiration for me and everything I can discover from him is gold for my journey.</li>
+                  <li>Key lesson from <span className="font-semibold text-[#00DAFB]">@levelsio</span> deep-dive:<br />
+                    &rarr; Speed comes from solving <em>your own</em> problems first.<br />
+                    &rarr; Reminder to self: keep startup n.1 focused on a real pain point I understand.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Twitter management will be key, I&apos;ve decided to keep this format &quot;day x/365 of..&quot; because it&apos;s the best one for me to tell you my journey and the backstage of it. But at the same time I don&apos;t want to do just one post, I&apos;d like to push more value.
+              </li>
+              <li>
+                TikTok research.<br />
+                I had to do market research a lot for this. I&apos;m not an expert of the field but if I want to grow there and create a faceless figure like I am, I need to understand what works and what doesn&apos;t.
+              </li>
+              <li>
+                Brainstormed some ideas.<br />
+                It takes time to have a concrete idea, I don&apos;t want to just push a startup just because a light is turning on in my mind.<br />
+                &rarr; Generating ideas is easy, validating them is hard.<br />
+                Today I was trying to draft prompts for quick problem validation. But I&apos;m still hunting for the final form.
+              </li>
+            </ul>
+            <p>Feeling the challenge, but the process is moving.</p>
+          </div>
+          <div className="mt-8 flex justify-end">
+            <a
+              href={shareUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-[#00DAFB] text-white rounded-lg font-semibold shadow hover:bg-[#00b8c7] transition-colors"
+            >
+              <svg width="20" height="20" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="120" height="120" rx="24" fill="black"/>
+                <path d="M85 35H100L67.5 70L105 120H79L60 95L41 120H15L52.5 70L20 35H45L60 55L75 35ZM80 110H90L50 50H40L80 110Z" fill="white"/>
+              </svg>
+              Condividi su X
+            </a>
+          </div>
+        </article>
+      </div>
+    );
+  }
+
+  if (id === '2025-05-01-day-0') {
+    // JSX/HTML diretto per il post Day 0
+    const shareUrl = `https://x.com/intent/tweet?url=https://creatorllm.vercel.app/blog/2025-05-01-day-0`;
+    return (
+      <div className="max-w-2xl mx-auto py-10 px-4">
+        <ProgressTracker startDate="2025-05-01" />
+        <article className="bg-white rounded-xl shadow-lg p-8 md:p-12 mt-6 mb-8 border border-[#00DAFB]/10">
+          <div className="mb-4 flex flex-col gap-1">
+            <span className="text-[#00DAFB] font-semibold text-sm uppercase tracking-widest">
+              2025-05-01
+            </span>
+            <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-2">
+              Day 0/365 of building 12 startups in 12 months
+            </h1>
+            <p className="text-lg text-gray-600 mb-2">
+              Setting the foundation: planning, mindset, and first steps before the challenge begins.
+            </p>
+          </div>
+          <hr className="my-6 border-[#00DAFB]/20" />
+          <div className="text-gray-900 text-lg leading-relaxed space-y-4">
+            <p>Day 0/365 of building 12 startups in 12 months.</p>
+            <p>After creating my socials and sharing my story yesterday, today was about getting my mind clear and setting the foundation for the next 365 days.</p>
+            <p>First thing I had to do was to build a plan, a solid 12-month roadmap with real long-term goals baked in.<br />
+            Then, I started brainstorming ideas for the first month because I didn't show up here with something ready to launch, but with something to build from 0.<br />
+            These first few days are for market research.</p>
+            <p>Every startup or digital product I launch will come from three places:</p>
+            <ul className="list-disc pl-6">
+              <li>problems I personally experience in different fields</li>
+              <li>real frustrations people already face (and talk about) in those spaces</li>
+              <li>things I like</li>
+            </ul>
+            <p>And that&apos;s because you should never build something you don&apos;t understand and appreciate the value.<br />
+            If you don&apos;t live it, don&apos;t ship it.</p>
+            <p>So the next steps will be:</p>
+            <ul className="list-disc pl-6">
+              <li>brainstorming</li>
+              <li>market research for potential problems people face</li>
+              <li>validate the ideas</li>
+              <li>find solutions and outline the initial scope for the very first projects</li>
+            </ul>
+            <p>See you tomorrow.</p>
+          </div>
+          <div className="mt-8 flex justify-end">
+            <a
+              href={shareUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-[#00DAFB] text-white rounded-lg font-semibold shadow hover:bg-[#00b8c7] transition-colors"
+            >
+              <svg width="20" height="20" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="120" height="120" rx="24" fill="black"/>
+                <path d="M85 35H100L67.5 70L105 120H79L60 95L41 120H15L52.5 70L20 35H45L60 55L75 35ZM80 110H90L50 50H40L80 110Z" fill="white"/>
+              </svg>
+              Condividi su X
+            </a>
+          </div>
+        </article>
+      </div>
+    );
+  }
+
+  if (id === '2025-05-03-day-3' || id === '2025-05-04-day-3') {
+    // JSX/HTML diretto per il post Day 3 (ora 4 maggio)
+    const shareUrl = `https://x.com/intent/tweet?url=https://creatorllm.vercel.app/blog/2025-05-04-day-3`;
+    return (
+      <div className="max-w-2xl mx-auto py-10 px-4">
+        <ProgressTracker startDate="2025-05-01" />
+        <article className="bg-white rounded-xl shadow-lg p-8 md:p-12 mt-6 mb-8 border border-[#00DAFB]/10">
+          <div className="mb-4 flex flex-col gap-1">
+            <span className="text-[#00DAFB] font-semibold text-sm uppercase tracking-widest">
+              2025-05-04
+            </span>
+            <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-2">
+              Day 3/365 of building 12 startups in 12 months
+            </h1>
+            <p className="text-lg text-gray-600 mb-2">
+              Debugging, wasted time, and new ideas: a day of learning and frustration.
+            </p>
+          </div>
+          <hr className="my-6 border-[#00DAFB]/20" />
+          <div className="text-gray-900 text-lg leading-relaxed space-y-4">
+            <p>Day 3/365 of building 12 startups in 12 months.</p>
+            <p>Yesterday I did not posted but.. a lot of time wasted for now.</p>
+            <p>Two days ago I was watching <span className="font-semibold text-[#00DAFB]">@starter_story</span>&apos;s yt video with him trying to build a website with Cursor.<br />
+            Three days ago I was watching <span className="font-semibold text-[#00DAFB]">@marc_louvion</span> building a website.<br />
+            And I swear I was hyped a lot.</p>
+            <p>So, I&apos;ve spent the whole day trying to build a blog to insert every post i will share here on twitter with this format.<br />
+            The goal was to build something simple to start, like imagine if I have to build a SaaS.<br />
+            I&apos;ve started building an homepage, calendarview, something simple... until I realized that my blog posts text wasn&apos;t respecting the points I was using, the number like (1.) the spaces I was using and I tried to debug for like 2 hours with no results.</p>
+            <p>I have to say it, i&apos;ve burned 6/7 hours of precious time.<br />
+            I need to continue another days to try and fix it.</p>
+            <p>At the same time I decided to scraped some ideas with Gemini and look for potential solutions with problems I&apos;ve spotted in the AI community / digital products.</p>
+            <p>Tomorrow I will share a lot of related content.<br />
+            Have a good night everyone.</p>
+          </div>
+          <div className="mt-8 flex justify-end">
+            <a
+              href={shareUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-[#00DAFB] text-white rounded-lg font-semibold shadow hover:bg-[#00b8c7] transition-colors"
+            >
+              <svg width="20" height="20" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="120" height="120" rx="24" fill="black"/>
+                <path d="M85 35H100L67.5 70L105 120H79L60 95L41 120H15L52.5 70L20 35H45L60 55L75 35ZM80 110H90L50 50H40L80 110Z" fill="white"/>
+              </svg>
+              Condividi su X
+            </a>
+          </div>
+        </article>
+      </div>
+    );
+  }
+
+  // Rendering standard per tutti gli altri post
   const postData = await getPostData(id);
-  const { date } = postData;
 
   return (
-    <>
-      <ProgressBar
-        date={date}
-        startDate="2025-05-01"
-        totalDays={365}
-      />
-      <article className="prose prose-lg mx-auto py-8">
-        <h1>{postData.title}</h1>
-        <p>{date}</p>
-        <div dangerouslySetInnerHTML={{ __html: postData.content }} />
+    <div className="max-w-2xl mx-auto py-10 px-4">
+      <ProgressTracker startDate="2025-05-01" />
+      <article className="bg-white rounded-xl shadow-lg p-8 md:p-12 mt-6 mb-8 border border-[#00DAFB]/10">
+        <div className="mb-4 flex flex-col gap-1">
+          <span className="text-[#00DAFB] font-semibold text-sm uppercase tracking-widest">
+            {postData.date}
+          </span>
+          <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-2">
+            {postData.title}
+          </h1>
+          {postData.description && (
+            <p className="text-lg text-gray-600 mb-2">{postData.description}</p>
+          )}
+        </div>
+        <hr className="my-6 border-[#00DAFB]/20" />
+        <div className="prose prose-lg max-w-none">
+          <div dangerouslySetInnerHTML={{ __html: postData.content }} />
+        </div>
       </article>
-    </>
+    </div>
   );
 }

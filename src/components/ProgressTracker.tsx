@@ -19,11 +19,15 @@ export default function ProgressTracker({
   const pct = Math.round((dayNum / totalDays) * 100);
 
   return (
-    <div className="fixed top-0 left-0 w-full h-2 bg-gray-200 z-50">
+    <div className="w-full bg-gray-200 rounded h-4 mb-4 mt-2">
       <div
-        className="h-2 bg-[#00DAFB] transition-width duration-500"
+        className="h-4 bg-[#00DAFB] rounded transition-width duration-500"
         style={{ width: `${pct}%` }}
       />
+      <div className="flex justify-between text-xs text-gray-700 mt-1 px-1">
+        <span>Day {dayNum} of {totalDays}</span>
+        <span>{pct}%</span>
+      </div>
     </div>
   );
 }
