@@ -250,7 +250,20 @@ export default async function Page(props: any) {
             ➝ reviewing my idea list and picking just 1 to validate faster</p>
             <p>warming up.</p>
           </div>
-          <div className="mt-8 flex justify-end">
+          <div className="mt-8 flex flex-col items-end gap-4">
+            <a
+              href="https://drive.google.com/file/d/1Tq0W_aLpXpceIoX0KPSwUo_ura7_ifZa/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-[#00DAFB] text-white rounded-lg font-semibold shadow hover:bg-[#00b8c7] transition-colors"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              Download TikTok Strategy
+            </a>
             <a
               href={shareUrl}
               target="_blank"
@@ -305,7 +318,7 @@ export default async function Page(props: any) {
             the blog obviously is not for reach but for documentation and if it helps someone it&apos;s even better.</p>
             <p>also spent part of the day:</p>
             <ol className="list-decimal pl-6">
-              <li>deep-researched tiktok strategies for faceless profiles (will share link to download at the end of today&apos;s blog post here: <a href="https://creatorllm.blog/timeline" className="text-[#00DAFB] hover:underline">creatorllm.blog/timeline</a>)</li>
+              <li>deep-researched tiktok strategies for faceless profiles (will share link to download at the end of today&apos;s blog post here: <a href="https://creatorllm.blog/blog/2025-05-06-day-5" className="text-[#00DAFB] hover:underline">@https://creatorllm.blog/blog/2025-05-06-day-5</a>)</li>
               <li>discovered <span className="font-semibold text-[#00DAFB]">@reel_farm</span> by <span className="font-semibold text-[#00DAFB]">@_mattwelter</span> for potential tiktok video creation.<br />
               useful for anyone looking to scale short-form content fast.</li>
               <li>started building startup #1:<br />
@@ -317,7 +330,20 @@ export default async function Page(props: any) {
             ➝ Every project, even a blog, is to train skills you&apos;ll need later.</p>
             <p>Keep showing up.</p>
           </div>
-          <div className="mt-8 flex justify-end">
+          <div className="mt-8 flex flex-col items-end gap-4">
+            <a
+              href="https://drive.google.com/file/d/1Tq0W_aLpXpceIoX0KPSwUo_ura7_ifZa/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-[#00DAFB] text-white rounded-lg font-semibold shadow hover:bg-[#00b8c7] transition-colors"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              Download TikTok Strategy
+            </a>
             <a
               href={shareUrl}
               target="_blank"
