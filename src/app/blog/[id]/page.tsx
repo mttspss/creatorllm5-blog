@@ -269,6 +269,73 @@ export default async function Page(props: any) {
     );
   }
 
+  if (id === '2025-05-06-day-5') {
+    // JSX/HTML diretto per il post Day 5
+    const shareUrl = `https://x.com/intent/tweet?url=https://creatorllm.vercel.app/blog/2025-05-06-day-5`;
+    return (
+      <div className="max-w-2xl mx-auto py-10 px-4">
+        <ProgressTracker startDate="2025-05-01" />
+        <article className="bg-white rounded-xl shadow-lg p-8 md:p-12 mt-6 mb-8 border border-[#00DAFB]/10">
+          <div className="mb-4 flex flex-col gap-1">
+            <span className="text-[#00DAFB] font-semibold text-sm uppercase tracking-widest">
+              2025-05-06
+            </span>
+            <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-2">
+              Day 5/365 of building 12 startups in 12 months
+            </h1>
+            <p className="text-lg text-gray-600 mb-2">
+              First MVP locked in. Blog improvements and startup #1 begins.
+            </p>
+          </div>
+          <hr className="my-6 border-[#00DAFB]/20" />
+          <div className="text-gray-900 text-lg leading-relaxed space-y-4">
+            <p>Day 5/365 of building 12 startups in 12 months.</p>
+            <p>First MVP locked in.</p>
+            <p>after scraping a lot of ideas during the week, finally first mvp is done completed with a 7 day plan.<br />
+            some ideas had to be dropped because of how strictly regulated certain niches are. (and that should be a good reminder for you too)</p>
+            <p>after launching the blog yesterday, today was about improving it:</p>
+            <ul className="list-disc pl-6">
+              <li>optimized SEO and performance</li>
+              <li>added estimated reading time for each post</li>
+              <li>added sharing functionality to blog posts</li>
+              <li>missing google analytics but ill do it tonight</li>
+            </ul>
+            <p>i&apos;m trying hard even with a blog, because when it will be time for a real startup, i should be able to predict.<br />
+            it forces me to clarify the process, not just share the vibe.<br />
+            the blog obviously is not for reach but for documentation and if it helps someone it&apos;s even better.</p>
+            <p>also spent part of the day:</p>
+            <ol className="list-decimal pl-6">
+              <li>deep-researched tiktok strategies for faceless profiles (will share link to download at the end of today&apos;s blog post here: <a href="https://creatorllm.blog/timeline" className="text-[#00DAFB] hover:underline">creatorllm.blog/timeline</a>)</li>
+              <li>discovered <span className="font-semibold text-[#00DAFB]">@reel_farm</span> by <span className="font-semibold text-[#00DAFB]">@_mattwelter</span> for potential tiktok video creation.<br />
+              useful for anyone looking to scale short-form content fast.</li>
+              <li>started building startup #1:<br />
+              the UI, auth, apis, supabase for the first startup idea (should be done within a week).<br />
+              im currently at day 0 for startup #1.</li>
+            </ol>
+            <p>Key lessons today:</p>
+            <p>➝ Validate your niche before you fall in love with the idea because regulation can kill momentum.<br />
+            ➝ Every project, even a blog, is to train skills you&apos;ll need later.</p>
+            <p>Keep showing up.</p>
+          </div>
+          <div className="mt-8 flex justify-end">
+            <a
+              href={shareUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-[#00DAFB] text-white rounded-lg font-semibold shadow hover:bg-[#00b8c7] transition-colors"
+            >
+              <svg width="20" height="20" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="120" height="120" rx="24" fill="black"/>
+                <path d="M85 35H100L67.5 70L105 120H79L60 95L41 120H15L52.5 70L20 35H45L60 55L75 35ZM80 110H90L50 50H40L80 110Z" fill="white"/>
+              </svg>
+              Condividi su X
+            </a>
+          </div>
+        </article>
+      </div>
+    );
+  }
+
   // Rendering standard per tutti gli altri post
   const postData = await getPostData(id);
 
