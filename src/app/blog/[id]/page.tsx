@@ -362,6 +362,65 @@ export default async function Page(props: any) {
     );
   }
 
+  if (id === '2025-05-07-day-6') {
+    // JSX/HTML diretto per il post Day 6
+    const shareUrl = `https://x.com/intent/tweet?url=https://creatorllm.vercel.app/blog/2025-05-07-day-6`;
+    return (
+      <div className="max-w-2xl mx-auto py-10 px-4">
+        <ProgressTracker startDate="2025-05-01" />
+        <article className="bg-white rounded-xl shadow-lg p-8 md:p-12 mt-6 mb-8 border border-[#00DAFB]/10">
+          <div className="mb-4 flex flex-col gap-1">
+            <span className="text-[#00DAFB] font-semibold text-sm uppercase tracking-widest">
+              2025-05-07
+            </span>
+            <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-2">
+              Day 6/365 of building 12 startups in 12 months
+            </h1>
+            <p className="text-lg text-gray-600 mb-2">
+              Lost all the code for the first startup. Losing your work sucks but losing momentum is worse.
+            </p>
+          </div>
+          <hr className="my-6 border-[#00DAFB]/20" />
+          <div className="text-gray-900 text-lg leading-relaxed space-y-4">
+            <p>Day 6/365 of building 12 startups in 12 months.</p>
+            <p>Lost all the code for the first startup.<br />
+            Losing your work sucks but losing momentum is worse.</p>
+            <p>and even if it&apos;s almost 11pm, im here tweeting because I promised myself I wouldn&apos;t lose discipline too.</p>
+            <p>Today was really painful.<br />
+            I lost the full codebase for the landing page and the SaaS I was building. unfortunately i didn&apos;t do a backup or a git commit and it&apos;s gone, so, I have to start from zero again.<br />
+            it was supposed to be day 0 of the MVP, guess there&apos;s a reason why you start from day 1 usually.</p>
+            <p>It sucks, but i hope to rebuild it fast:</p>
+            <ul className="list-disc pl-6">
+              <li>I already know what I want to build</li>
+              <li>And next time, I won&apos;t make the same mistake</li>
+            </ul>
+            <p>also: losing something you&apos;ve built reminds you how fragile early-stage projects are.<br />
+            You have to create systems that reduce the chance of stupid errors.  and that&apos;s part of becoming a better builder, not just a faster one.</p>
+            <p>what I&apos;ve learned today:</p>
+            <p>➝ Always save your code, git is not an optional, even for day 0.<br />
+            ➝ Repetition creates mastery so the rebuild will be sharper.</p>
+            <p>i&apos;ll rebuild the site and try to ship a working beta as planned.<br />
+            see you tomorrow.</p>
+          </div>
+          <div className="mt-8 flex justify-end">
+            <a
+              href={shareUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-[#00DAFB] text-white rounded-lg font-semibold shadow hover:bg-[#00b8c7] transition-colors"
+            >
+              <svg width="20" height="20" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="120" height="120" rx="24" fill="black"/>
+                <path d="M85 35H100L67.5 70L105 120H79L60 95L41 120H15L52.5 70L20 35H45L60 55L75 35ZM80 110H90L50 50H40L80 110Z" fill="white"/>
+              </svg>
+              Condividi su X
+            </a>
+          </div>
+        </article>
+      </div>
+    );
+  }
+
   // Rendering standard per tutti gli altri post
   const postData = await getPostData(id);
 
