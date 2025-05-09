@@ -421,6 +421,72 @@ export default async function Page(props: any) {
     );
   }
 
+  if (id === '2025-05-08-day-7') {
+    // JSX/HTML diretto per il post Day 7
+    const shareUrl = `https://x.com/intent/tweet?url=https://creatorllm.vercel.app/blog/2025-05-08-day-7`;
+    return (
+      <div className="max-w-2xl mx-auto py-10 px-4">
+        <ProgressTracker startDate="2025-05-01" />
+        <article className="bg-white rounded-xl shadow-lg p-8 md:p-12 mt-6 mb-8 border border-[#00DAFB]/10">
+          <div className="mb-4 flex flex-col gap-1">
+            <span className="text-[#00DAFB] font-semibold text-sm uppercase tracking-widest">
+              2025-05-08
+            </span>
+            <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-2">
+              Day 7/365 of building 12 startups in 12 months
+            </h1>
+            <p className="text-lg text-gray-600 mb-2">
+              Rebuilding the website one step at a time. After a setback, making steady progress.
+            </p>
+          </div>
+          <hr className="my-6 border-[#00DAFB]/20" />
+          <div className="text-gray-900 text-lg leading-relaxed space-y-4">
+            <p>Day 7/365 of building 12 startups in 12 months.</p>
+            <p>Rebuilding the website one step at a time.</p>
+            <p>after the full wipeout of the code yesterday, today was all about rebuilding.<br />
+            same goal, same vision but with high focus and respect for the process<br />
+            I have no rush this time.</p>
+            <p>the structure is working.<br />
+            the skeleton is there<br />
+            the landing page is almost complete.</p>
+            <p>I was very busy at work so couldn&apos;t finish it completely, but..</p>
+            <p>I&apos;ll use the weekend to:</p>
+            <ul className="list-disc pl-6">
+              <li>clean the UI</li>
+              <li>connect backend and auth</li>
+              <li>test it properly</li>
+              <li>and prep the launch</li>
+            </ul>
+            <p>I want next week to start at full speed.</p>
+            <p>Some thoughts from today:</p>
+            <p>➝ Frustration is part of the deal.<br />
+            ➝ Trust the process, have no expectations.</p>
+            <p>im updating also x impressions, not a lot but it&apos;s a start.<br />
+            as you know my profile was created one week ago and im proud for every single follower i have.<br />
+            im very happy.</p>
+            <p>it&apos;s been 7 days, one full week, and im proud<br />
+            and even if I had a mini crash yesterday, I&apos;m still here moving.<br />
+            Let&apos;s go.</p>
+          </div>
+          <div className="mt-8 flex justify-end">
+            <a
+              href={shareUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-[#00DAFB] text-white rounded-lg font-semibold shadow hover:bg-[#00b8c7] transition-colors"
+            >
+              <svg width="20" height="20" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="120" height="120" rx="24" fill="black"/>
+                <path d="M85 35H100L67.5 70L105 120H79L60 95L41 120H15L52.5 70L20 35H45L60 55L75 35ZM80 110H90L50 50H40L80 110Z" fill="white"/>
+              </svg>
+              Condividi su X
+            </a>
+          </div>
+        </article>
+      </div>
+    );
+  }
+
   // Rendering standard per tutti gli altri post
   const postData = await getPostData(id);
 
